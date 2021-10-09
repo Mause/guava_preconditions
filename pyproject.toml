@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "guava_preconditions"
-version = "0.1.0"
+version = "0.1.1"
 description = "A python version of guava's preconditions"
 authors = ["Elliana <me@mause.me>"]
 license = "MIT"
