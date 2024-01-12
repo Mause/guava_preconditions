@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - name: Python Poetry Action
-        uses: abatilo/actions-poetry@v2.1.4
+        uses: abatilo/actions-poetry@v3.0.0
       - run: poetry install
       - name: Update readme
         uses: technote-space/create-pr-action@v2
