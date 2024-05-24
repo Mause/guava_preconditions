@@ -11,7 +11,7 @@ class IllegalArgumentException(Exception):
     pass
 
 
-def checkArgument(
+def check_argument(
     expression: bool, errorMessageTemplate: Optional[str] = None, *errorMessageArgs: Any
 ) -> None:
     "Ensures the truth of an expression involving one or more parameters to the calling method."
@@ -24,7 +24,7 @@ def checkArgument(
         )
 
 
-def checkElementIndex(index: int, size: int, desc: str = None) -> int:
+def check_element_index(index: int, size: int, desc: str = None) -> int:
     "Ensures that index specifies a valid element in an array, list or string of size size."
 
     if index < 0 or index > (size - 1):
@@ -33,7 +33,7 @@ def checkElementIndex(index: int, size: int, desc: str = None) -> int:
     return index
 
 
-def checkNotNull(
+def check_not_null(
     reference: Optional[T], errorMessageTemplate: str, *errorMessageArgs: Any
 ) -> T:
     "Ensures that an object reference passed as a parameter to the calling method is not null."
@@ -48,13 +48,13 @@ def checkNotNull(
     return reference
 
 
-def checkPositionIndex(index: int, size: int, desc: str = None) -> int:
+def check_position_index(index: int, size: int, desc: str = None) -> int:
     "Ensures that index specifies a valid position in an array, list or string of size size."
 
     return checkElementIndex(index, size, desc)
 
 
-def checkPositionIndexes(start: int, end: int, size: int) -> None:
+def check_position_indexes(start: int, end: int, size: int) -> None:
     "Ensures that start and end specify a valid positions in an array, list or string of size size, and are in order."
 
     if start < 0:
@@ -65,7 +65,7 @@ def checkPositionIndexes(start: int, end: int, size: int) -> None:
         checkElementIndex(end, size)
 
 
-def checkState(
+def check_state(
     expression: bool, errorMessageTemplate: str = None, *errorMessageArgs: Any
 ) -> None:
     "Ensures the truth of an expression involving the state of the calling instance, but not involving any parameters to the calling method."
